@@ -1,0 +1,128 @@
+2025-10-30 23:28:23 | ERROR    | langraph_agents.base_agent:__init__:38 | Settings object: gemini_api_key=None langchain_api_key='your_langsmith_api_key_here' langchain_tracing_v2=True langchain_project='rm-agentic-ai' log_level='INFO' enable_monitoring=True debug_mode=False max_concurrent_agents=5 agent_timeout=300 cache_ttl=3600 data_dir='data' models_dir='ml/models' output_dir='output' risk_model_path='ml/models/risk_profile_model.pkl' goal_model_path='ml/models/goal_success_model.pkl' risk_encoders_path='ml/models/label_encoders.pkl' goal_encoders_path='ml/models/goal_success_label_encoders.pkl' prospects_csv='data/input_data/prospects.csv' products_csv='data/input_data/products.csv' page_title='AI-Powered Investment Analyzer' page_icon='🤖' layout='wide' default_temperature=0.1 max_tokens=4000
+2025-10-30 23:28:23 | ERROR    | langraph_agents.base_agent:__init__:39 | Gemini API Key: None
+2025-10-30 23:31:27 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Data Analyst Agent
+2025-10-30 23:31:27 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Risk Assessment Agent
+2025-10-30 23:31:44 | ERROR    | langraph_agents.agents.risk_assessment_agent:_load_models:33 | Failed to load risk models: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+2025-10-30 23:31:44 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Persona Agent
+2025-10-30 23:31:44 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Product Specialist Agent
+2025-10-30 23:31:44 | INFO     | langraph_agents.agents.product_specialist_agent:_load_products:28 | Loaded 15 products from catalog
+2025-10-30 23:32:24 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Data Analyst Agent
+2025-10-30 23:32:24 | INFO     | langraph_agents.agents.data_analyst_agent:execute:24 | Starting data analysis and validation
+2025-10-30 23:32:24 | INFO     | langraph_agents.agents.data_analyst_agent:execute:49 | Data analysis completed. Quality score: 1.0
+2025-10-30 23:32:24 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Data Analyst Agent
+2025-10-30 23:32:24 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Risk Assessment Agent
+2025-10-30 23:32:24 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:38 | Starting risk assessment
+2025-10-30 23:32:32 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:61 | Risk assessment completed. Risk level: High
+2025-10-30 23:32:32 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Risk Assessment Agent
+2025-10-30 23:32:32 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Persona Agent
+2025-10-30 23:32:32 | INFO     | langraph_agents.agents.persona_agent:execute:42 | Starting persona classification
+2025-10-30 23:32:37 | INFO     | langraph_agents.agents.persona_agent:execute:67 | Persona classification completed: Aggressive Growth
+2025-10-30 23:32:37 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Persona Agent
+2025-10-30 23:32:37 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Product Specialist Agent
+2025-10-30 23:32:37 | INFO     | langraph_agents.agents.product_specialist_agent:execute:71 | Starting product recommendation
+2025-10-30 23:32:52 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Data Analyst Agent
+2025-10-30 23:32:52 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Risk Assessment Agent
+2025-10-30 23:32:55 | ERROR    | langraph_agents.agents.risk_assessment_agent:_load_models:33 | Failed to load risk models: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+2025-10-30 23:32:55 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Persona Agent
+2025-10-30 23:32:55 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Product Specialist Agent
+2025-10-30 23:32:55 | INFO     | langraph_agents.agents.product_specialist_agent:_load_products:28 | Loaded 15 products from catalog
+2025-10-30 23:33:00 | INFO     | langraph_agents.agents.product_specialist_agent:execute:97 | Generated 5 product recommendations
+2025-10-30 23:33:00 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Product Specialist Agent
+2025-10-30 23:33:27 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Data Analyst Agent
+2025-10-30 23:33:27 | INFO     | langraph_agents.agents.data_analyst_agent:execute:24 | Starting data analysis and validation
+2025-10-30 23:33:27 | INFO     | langraph_agents.agents.data_analyst_agent:execute:49 | Data analysis completed. Quality score: 1.0
+2025-10-30 23:33:27 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Data Analyst Agent
+2025-10-30 23:33:27 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Risk Assessment Agent
+2025-10-30 23:33:27 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:38 | Starting risk assessment
+2025-10-30 23:33:27 | ERROR    | langraph_agents.base_agent:generate_response:146 | Error generating response: Task <Task pending name='Task-1005' coro=<BaseChatModel._agenerate_with_cache() running at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_core\language_models\chat_models.py:924> cb=[gather.<locals>._done_callback() at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:754]> got Future <Task pending name='Task-1006' coro=<InterceptedUnaryUnaryCall._invoke() running at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\aio\_interceptor.py:655> cb=[InterceptedCall._fire_or_add_pending_done_callbacks()]> attached to a different loop
+2025-10-30 23:33:27 | ERROR    | langraph_agents.base_agent:run:99 | Error in agent Risk Assessment Agent: Task <Task pending name='Task-1005' coro=<BaseChatModel._agenerate_with_cache() running at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_core\language_models\chat_models.py:924> cb=[gather.<locals>._done_callback() at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:754]> got Future <Task pending name='Task-1006' coro=<InterceptedUnaryUnaryCall._invoke() running at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\aio\_interceptor.py:655> cb=[InterceptedCall._fire_or_add_pending_done_callbacks()]> attached to a different loop
+2025-10-30 23:35:24 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Data Analyst Agent
+2025-10-30 23:35:24 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Risk Assessment Agent
+2025-10-30 23:35:27 | ERROR    | langraph_agents.agents.risk_assessment_agent:_load_models:33 | Failed to load risk models: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+2025-10-30 23:35:27 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Persona Agent
+2025-10-30 23:35:27 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Product Specialist Agent
+2025-10-30 23:35:27 | INFO     | langraph_agents.agents.product_specialist_agent:_load_products:28 | Loaded 15 products from catalog
+2025-10-30 23:36:07 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Data Analyst Agent
+2025-10-30 23:36:07 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Risk Assessment Agent
+2025-10-30 23:36:10 | ERROR    | langraph_agents.agents.risk_assessment_agent:_load_models:33 | Failed to load risk models: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+2025-10-30 23:36:10 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Persona Agent
+2025-10-30 23:36:10 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Product Specialist Agent
+2025-10-30 23:36:10 | INFO     | langraph_agents.agents.product_specialist_agent:_load_products:28 | Loaded 15 products from catalog
+2025-10-30 23:36:31 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Data Analyst Agent
+2025-10-30 23:36:31 | INFO     | langraph_agents.agents.data_analyst_agent:execute:24 | Starting data analysis and validation
+2025-10-30 23:36:31 | INFO     | langraph_agents.agents.data_analyst_agent:execute:49 | Data analysis completed. Quality score: 1.0
+2025-10-30 23:36:31 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Data Analyst Agent
+2025-10-30 23:36:31 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Risk Assessment Agent
+2025-10-30 23:36:31 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:38 | Starting risk assessment
+2025-10-30 23:36:39 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:61 | Risk assessment completed. Risk level: Moderate
+2025-10-30 23:36:39 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Risk Assessment Agent
+2025-10-30 23:36:39 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Persona Agent
+2025-10-30 23:36:39 | INFO     | langraph_agents.agents.persona_agent:execute:42 | Starting persona classification
+2025-10-30 23:36:44 | INFO     | langraph_agents.agents.persona_agent:execute:67 | Persona classification completed: Steady Saver
+2025-10-30 23:36:44 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Persona Agent
+2025-10-30 23:36:44 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Product Specialist Agent
+2025-10-30 23:36:44 | INFO     | langraph_agents.agents.product_specialist_agent:execute:71 | Starting product recommendation
+2025-10-30 23:37:56 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Data Analyst Agent
+2025-10-30 23:37:56 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Risk Assessment Agent
+2025-10-30 23:37:59 | ERROR    | langraph_agents.agents.risk_assessment_agent:_load_models:33 | Failed to load risk models: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+2025-10-30 23:37:59 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Persona Agent
+2025-10-30 23:37:59 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Product Specialist Agent
+2025-10-30 23:37:59 | INFO     | langraph_agents.agents.product_specialist_agent:_load_products:28 | Loaded 15 products from catalog
+2025-10-30 23:38:10 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Data Analyst Agent
+2025-10-30 23:38:10 | INFO     | langraph_agents.agents.data_analyst_agent:execute:24 | Starting data analysis and validation
+2025-10-30 23:38:10 | INFO     | langraph_agents.agents.data_analyst_agent:execute:49 | Data analysis completed. Quality score: 1.0
+2025-10-30 23:38:10 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Data Analyst Agent
+2025-10-30 23:38:10 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Risk Assessment Agent
+2025-10-30 23:38:10 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:38 | Starting risk assessment
+2025-10-30 23:38:18 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:61 | Risk assessment completed. Risk level: Moderate
+2025-10-30 23:38:18 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Risk Assessment Agent
+2025-10-30 23:38:19 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Persona Agent
+2025-10-30 23:38:19 | INFO     | langraph_agents.agents.persona_agent:execute:42 | Starting persona classification
+2025-10-30 23:38:25 | INFO     | langraph_agents.agents.persona_agent:execute:67 | Persona classification completed: Aggressive Growth
+2025-10-30 23:38:25 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Persona Agent
+2025-10-30 23:38:25 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Product Specialist Agent
+2025-10-30 23:38:25 | INFO     | langraph_agents.agents.product_specialist_agent:execute:71 | Starting product recommendation
+2025-10-30 23:38:46 | INFO     | langraph_agents.agents.product_specialist_agent:execute:97 | Generated 5 product recommendations
+2025-10-30 23:38:46 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Product Specialist Agent
+2025-10-30 23:41:05 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Data Analyst Agent
+2025-10-30 23:41:05 | INFO     | langraph_agents.agents.data_analyst_agent:execute:24 | Starting data analysis and validation
+2025-10-30 23:41:05 | INFO     | langraph_agents.agents.data_analyst_agent:execute:49 | Data analysis completed. Quality score: 1.0
+2025-10-30 23:41:05 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Data Analyst Agent
+2025-10-30 23:41:05 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Risk Assessment Agent
+2025-10-30 23:41:05 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:38 | Starting risk assessment
+2025-10-30 23:41:05 | ERROR    | langraph_agents.base_agent:generate_response:146 | Error generating response: Task <Task pending name='Task-1449' coro=<BaseChatModel._agenerate_with_cache() running at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_core\language_models\chat_models.py:924> cb=[gather.<locals>._done_callback() at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:754]> got Future <Task pending name='Task-1450' coro=<InterceptedUnaryUnaryCall._invoke() running at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\aio\_interceptor.py:655> cb=[InterceptedCall._fire_or_add_pending_done_callbacks()]> attached to a different loop
+2025-10-30 23:41:05 | ERROR    | langraph_agents.base_agent:run:99 | Error in agent Risk Assessment Agent: Task <Task pending name='Task-1449' coro=<BaseChatModel._agenerate_with_cache() running at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\site-packages\langchain_core\language_models\chat_models.py:924> cb=[gather.<locals>._done_callback() at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py:754]> got Future <Task pending name='Task-1450' coro=<InterceptedUnaryUnaryCall._invoke() running at C:\Users\PranavRamDS\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\aio\_interceptor.py:655> cb=[InterceptedCall._fire_or_add_pending_done_callbacks()]> attached to a different loop
+2025-10-30 23:41:42 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Data Analyst Agent
+2025-10-30 23:41:42 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Risk Assessment Agent
+2025-10-30 23:41:58 | ERROR    | langraph_agents.agents.risk_assessment_agent:_load_models:33 | Failed to load risk models: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+2025-10-30 23:41:58 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Persona Agent
+2025-10-30 23:41:58 | INFO     | langraph_agents.base_agent:__init__:60 | Initialized agent: Product Specialist Agent
+2025-10-30 23:41:58 | INFO     | langraph_agents.agents.product_specialist_agent:_load_products:28 | Loaded 15 products from catalog
+2025-10-30 23:42:05 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Data Analyst Agent
+2025-10-30 23:42:05 | INFO     | langraph_agents.agents.data_analyst_agent:execute:24 | Starting data analysis and validation
+2025-10-30 23:42:05 | INFO     | langraph_agents.agents.data_analyst_agent:execute:49 | Data analysis completed. Quality score: 1.0
+2025-10-30 23:42:05 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Data Analyst Agent
+2025-10-30 23:42:05 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Risk Assessment Agent
+2025-10-30 23:42:05 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:38 | Starting risk assessment
+2025-10-30 23:42:11 | INFO     | langraph_agents.agents.risk_assessment_agent:execute:61 | Risk assessment completed. Risk level: High
+2025-10-30 23:42:11 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Risk Assessment Agent
+2025-10-30 23:42:11 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Persona Agent
+2025-10-30 23:42:11 | INFO     | langraph_agents.agents.persona_agent:execute:42 | Starting persona classification
+2025-10-30 23:42:16 | INFO     | langraph_agents.agents.persona_agent:execute:67 | Persona classification completed: Aggressive Growth
+2025-10-30 23:42:16 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Persona Agent
+2025-10-30 23:42:16 | INFO     | langraph_agents.base_agent:run:77 | Starting execution for agent: Product Specialist Agent
+2025-10-30 23:42:16 | INFO     | langraph_agents.agents.product_specialist_agent:execute:71 | Starting product recommendation
+2025-10-30 23:42:36 | INFO     | langraph_agents.agents.product_specialist_agent:execute:97 | Generated 5 product recommendations
+2025-10-30 23:42:36 | INFO     | langraph_agents.base_agent:run:94 | Successfully completed execution for agent: Product Specialist Agent

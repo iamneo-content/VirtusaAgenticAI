@@ -1,0 +1,10 @@
+# Data Directory
+
+Place your PDF requirements documents in this directory.
+
+Example files:
+- Requirement-1.pdf
+- Banking-System-PRD.pdf
+- E-commerce-Requirements.pdf
+
+The application will automatically detect and list all PDF files in this directory.
